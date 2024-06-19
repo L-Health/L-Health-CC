@@ -98,5 +98,9 @@ The API uses standard HTTP status codes to indicate the success or failure of an
 - <b>500 Internal Server Error</b>: An error occurred on the server.
 
 ## Cloud Services Used
-- Database
+### Database
+- Firebase Authentication
+- Cloud Storage
+### Deployment
+- Cloud Run
 
