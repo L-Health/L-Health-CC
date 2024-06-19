@@ -3,10 +3,13 @@
 - L-Health Cloud Architecture
 <img src="https://storage.googleapis.com/cloud_architecture/diagram%20CC.png">
 
-## Links
+# Links
 - Backend URL: https://user-auth-api-fx7nghxp6q-et.a.run.app
 - Frontend URL:
-  
+
+## API Documentation
+This API provides endpoints for user registration, login, and user management, including retrieving, updating, and deleting user information. All user management operations (retrieving, updating, and deleting) require authentication.
+
 ## Endpoints
 ### 1. Register a New User
 - URL: /register
@@ -82,15 +85,16 @@
   - 404 Not Found: User not found.
 
 ## Authentication
-Authorization: Bearer <token>
+The endpoints for getting, updating, and deleting user information require an <b>authentication</b> token. The token should be included in the Authorization header of the request in the following format:
+- Authorization: Bearer <token>
 
 ## Error Handling
 The API uses standard HTTP status codes to indicate the success or failure of an API request:
-- 200 OK: The request was successful.
-- 201 Created: The resource was successfully created.
-- 400 Bad Request: The request was invalid or cannot be otherwise served.
-- 401 Unauthorized: The request requires user authentication.
-- 404 Not Found: The requested resource could not be found.
-- 500 Internal Server Error: An error occurred on the server.
+- <b>200 OK</b>: The request was successful.
+- <b>201 Created<b>: The resource was successfully created.
+- <b>400 Bad Request<b>: The request was invalid or cannot be otherwise served.
+- <b>401 Unauthorized<b>: The request requires user authentication.
+- <b>404 Not Found<b>: The requested resource could not be found.
+- <b>500 Internal Server Error<b>: An error occurred on the server.
 
 # 
