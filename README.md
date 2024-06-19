@@ -91,10 +91,8 @@ The endpoints for getting, updating, and deleting user information require an <b
 ## Error Handling
 The API uses standard HTTP status codes to indicate the success or failure of an API request:
 - <b>200 OK</b>: The request was successful.
-- <b>201 Created<b>: The resource was successfully created.
-- <b>400 Bad Request<b>: The request was invalid or cannot be otherwise served.
-- <b>401 Unauthorized<b>: The request requires user authentication.
-- <b>404 Not Found<b>: The requested resource could not be found.
-- <b>500 Internal Server Error<b>: An error occurred on the server.
-
-# 
+- <b>201 Created</b>: The resource was successfully created.
+- <b>400 Bad Request</b>: The request was invalid or cannot be otherwise served.
+- <b>401 Unauthorized</b>: The request requires user authentication.
+- <b>404 Not Found</b>: The requested resource could not be found.
+- <b>500 Internal Server Error</b>: An error occurred on the server.
