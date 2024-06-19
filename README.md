@@ -96,3 +96,7 @@ The API uses standard HTTP status codes to indicate the success or failure of an
 - <b>401 Unauthorized</b>: The request requires user authentication.
 - <b>404 Not Found</b>: The requested resource could not be found.
 - <b>500 Internal Server Error</b>: An error occurred on the server.
+
+## Cloud Services Used
+- Database
+
