@@ -1,3 +1,6 @@
+- L-Health Cloud Architecture
+<img src="https://storage.googleapis.com/cloud_architecture/diagram%20CC.png">
+
 # Endpoints
 ### 1. Register a New User
 - URL: /register
