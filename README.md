@@ -4,7 +4,7 @@
 # Endpoints
 ### 1. Register a New User
 - URL: /register
-- Method: POST
+- Method: <mark>POST</mark>
 - Description: Registers a new user.
 - Request Body: {
   "username": "string",
@@ -17,7 +17,7 @@
  
 ### 2. Login
 - URL: /login
-- Method: POST
+- Method: <mark>POST</mark>
 - Description: Logs in an existing user.
 - Request Body: {
   "email": "string",
@@ -29,7 +29,7 @@
 
 ### 3. Get User Information
 - URL: /user/:userId
-- Method: GET
+- Method: <mark>GET</mark>
 - Description: Retrieves information about a specific user. Requires authentication.
 - URL Parameters:
   - userId (string): ID of the user to retrieve.
@@ -43,7 +43,7 @@
  
 ### 4. Update User Information
 - URL: /user/:userId
-- Method: PUT
+- Method: <mark>PUT</mark>
 - Description: Updates information for a specific user. Requires authentication.
 - URL Parameters:
   - userId (string): ID of the user to update.
@@ -63,7 +63,7 @@
     
 ### 5. Delete User
 - URL: /user/:userId
-- Method: DELETE
+- Method: <mark>DELETE</mark>
 - Description: Deletes a specific user. Requires authentication.
 - URL Parameters:
     - userId (string): ID of the user to delete.
