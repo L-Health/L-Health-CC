@@ -36,55 +36,7 @@ This API provides endpoints for user registration, login, and user management, i
   - 200 OK: Login successful. Returns authentication token.
   - 401 Unauthorized: Invalid email or password.
 
-### 3. Get User Information
-- URL: /user/:userId
-- Method: <mark>GET</mark>
-- Description: Retrieves information about a specific user. Requires authentication.
-- URL Parameters:
-  - userId (string): ID of the user to retrieve.
-- Headers: {
-  "Authorization": "Bearer <token>"
-}
-- Responses:
-  - 200 OK: Returns user information.
-  - 401 Unauthorized: Authentication token missing or invalid.
-  - 404 Not Found: User not found.
- 
-### 4. Update User Information
-- URL: /user/:userId
-- Method: <mark>PUT</mark>
-- Description: Updates information for a specific user. Requires authentication.
-- URL Parameters:
-  - userId (string): ID of the user to update.
-- Headers: {
-  "Authorization": "Bearer <token>"
-}
-- Request Body: {
-  "username": "string",  // Optional
-  "email": "string",     // Optional
-  "password": "string"   // Optional
-}
-- Responses:
-  - 200 OK: User information updated successfully.
-  - 401 Unauthorized: Authentication token missing or invalid.
-  - 404 Not Found: User not found.
-  - 400 Bad Request: Validation error or missing required fields.
-    
-### 5. Delete User
-- URL: /user/:userId
-- Method: <mark>DELETE</mark>
-- Description: Deletes a specific user. Requires authentication.
-- URL Parameters:
-    - userId (string): ID of the user to delete.
-    - Headers: {
-  "Authorization": "Bearer <token>"
-}
-- Responses:
-  - 200 OK: User deleted successfully.
-  - 401 Unauthorized: Authentication token missing or invalid.
-  - 404 Not Found: User not found.
-
-### 6. Predict Health Recommendations
+### 3. Predict Health Recommendations
 - URL: /api/predict
 - Method: <mark>POST</mark>
 - Description: Predicts health recommendations based on symptoms, food choices, obesity status, and meal types.
@@ -103,10 +55,6 @@ This API provides endpoints for user registration, login, and user management, i
   - <b>dinner</b (string, required): Type of dinner consumed.
   - <b>breakfast</b (string, required): Type of breakfast consumed.
   - <b>lunch</b (string, required): Type of lunch consumed.
-
-## Authentication
-The endpoints for getting, updating, and deleting user information require an <b>authentication</b> token. The token should be included in the Authorization header of the request in the following format:
-- Authorization: Bearer <token>
 
 ## Error Handling
 The API uses standard HTTP status codes to indicate the success or failure of an API request:
