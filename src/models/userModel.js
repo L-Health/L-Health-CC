@@ -4,7 +4,6 @@ const createUserProfile = async (userId, profileData) => {
   await db.collection('users').doc(userId).set(profileData);
 };
 
-<<<<<<< HEAD
 // const getUserProfile = async (userId) => {
 //   const userDoc = await db.collection('users').doc(userId).get();
 //   return userDoc.exists ? userDoc.data() : null;
@@ -23,24 +22,4 @@ module.exports = {
   // getUserProfile,
   // updateUserProfile,
   // deleteUserProfile
-=======
-const getUserProfile = async (userId) => {
-  const userDoc = await db.collection('users').doc(userId).get();
-  return userDoc.exists ? userDoc.data() : null;
-};
-
-const updateUserProfile = async (userId, profileData) => {
-  await db.collection('users').doc(userId).update(profileData);
-};
-
-const deleteUserProfile = async (userId) => {
-  await db.collection('users').doc(userId).delete();
-};
-
-module.exports = {
-  createUserProfile,
-  getUserProfile,
-  updateUserProfile,
-  deleteUserProfile
->>>>>>> d8aff3604d31a0ac917323d3dce57f45bda50b66
 };
