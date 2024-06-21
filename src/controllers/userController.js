@@ -1,6 +1,10 @@
 const bcrypt = require('bcryptjs');
 const { admin } = require('../config/firebase');
+<<<<<<< HEAD
 const { createUserProfile, getUserProfile } = require('../models/userModel');
+=======
+const { createUserProfile, getUserProfile, updateUserProfile, deleteUserProfile } = require('../models/userModel');
+>>>>>>> d8aff3604d31a0ac917323d3dce57f45bda50b66
 
 const register = async (req, res) => {
   const { email, password, profile } = req.body;
@@ -25,8 +29,13 @@ const login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
+<<<<<<< HEAD
     console.log('Email:', email);
     console.log('Password:', password); 
+=======
+    console.log('Email:', email); // Log email value
+    console.log('Password:', password); // Log password value
+>>>>>>> d8aff3604d31a0ac917323d3dce57f45bda50b66
 
     if (!email || !password) {
       throw new Error('Email and password are required');
@@ -65,6 +74,7 @@ const login = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 // const getUser = async (req, res) => {
 //   const { userId } = req.params;
 //   try {
@@ -99,11 +109,53 @@ const login = async (req, res) => {
 //     res.status(400).send({ error: error.message });
 //   }
 // };
+=======
+const getUser = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    const profile = await getUserProfile(userId);
+    if (profile) {
+      res.status(200).send(profile);
+    } else {
+      res.status(404).send({ error: 'User not found' });
+    }
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+};
+
+const updateUser = async (req, res) => {
+  const { userId } = req.params;
+  const profileData = req.body;
+  try {
+    await updateUserProfile(userId, profileData);
+    res.status(200).send({ message: 'Profile updated' });
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+};
+
+const deleteUser = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    await deleteUserProfile(userId);
+    res.status(200).send({ message: 'Profile deleted' });
+  } catch (error) {
+    res.status(400).send({ error: error.message });
+  }
+};
+>>>>>>> d8aff3604d31a0ac917323d3dce57f45bda50b66
 
 module.exports = {
   register,
   login,
+<<<<<<< HEAD
   // getUser,
   // updateUser,
   // deleteUser
+=======
+  getUser,
+  updateUser,
+  deleteUser
+>>>>>>> d8aff3604d31a0ac917323d3dce57f45bda50b66
 };
